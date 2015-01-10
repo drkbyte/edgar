@@ -18,16 +18,6 @@ for link in soup.find_all('filinghref'):
 	#print l2
 	l3 = l2.replace('</filinghref>','')
 	link_list.append(l3)
-'''
-for url in link_list:
-	r = requests.get(url)
-	data = r.text
-	soup = BeautifulSoup(data)
-	print soup
-'''
-
-#while '<filinghref>' in link_str:
-#	link_str.remove('<filinghref>')
 
 print link_list
 base_url = link_list[0]
